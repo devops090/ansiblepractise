@@ -1,5 +1,5 @@
 - name : deploying the student project
-  hosts : STAGE
+  hosts : PROD
   become : yes
   vars :
     - USERNAME : student
