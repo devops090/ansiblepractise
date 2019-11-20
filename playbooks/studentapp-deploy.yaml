@@ -1,7 +1,6 @@
 - name : deploying the student project
   hosts : STAGE
   become : yes
-  become_method: sudo
   vars :
     - USERNAME : student
     - TOMCAT_PATH : /home/student
