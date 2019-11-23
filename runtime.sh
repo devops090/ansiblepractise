@@ -6,5 +6,6 @@ STUDENTWAR=$http_url/$VER/studentapp-$FINALVER.war)
 echo $VER
 echo $IDNO
 echo $FINALVER
+echo $http_url
 echo $STUDENTWAR
 ansible-playbook playbooks/studentapp-deploy.yaml -i inventory -u student --extra-vars "ansible_sudo_pass=student" "STUDENTWAR=$STUDENTWAR"
