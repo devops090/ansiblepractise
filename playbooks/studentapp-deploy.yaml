@@ -5,7 +5,7 @@
     - USERNAME : student
     - TOMCAT_PATH : /home/student
     - TOMCAT_DIR : "{{TOMCAT_PATH}}/tomcat9"
-    - STUNDENTWAR : http://35.223.250.236:8081/repository/studenapp-snapshot/com/jdevs/studentapp/2.7-SNAPSHOT/studentapp-2.7-20191023.053037-4.war
+    - STUNDENTWAR : http://admin:admin123@35.223.250.236:8081/repository/studenapp-snapshot/com/jdevs/studentapp/2.7-SNAPSHOT/studentapp-2.7-20191023.053037-4.war
   tasks :
 
     - name : print the TOMCAT_DIR
