@@ -8,4 +8,4 @@ echo $IDNO
 echo $FINALVER
 echo $http_url
 echo $STUDENTWAR
-#ansible-playbook playbooks/studentapp-deploy.yaml -i inventory -u student --extra-vars "ansible_sudo_pass=student" "STUDENTWAR=$STUDENTWAR"
+ansible-playbook playbooks/studentapp-deploy.yaml -i inventory -u student --extra-vars "ansible_sudo_pass=student" "STUDENTWAR=$STUDENTWAR"
