@@ -1,6 +1,6 @@
 - name : deploying the student project
   hosts : STAGE
-  become : yes
+  #become : yes
   vars :
     - USERNAME : student
     - TOMCAT_PATH : /home/student
