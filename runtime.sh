@@ -11,4 +11,4 @@ echo $URL
 STUDENTWAR=$URL
 echo $STUDENTWAR
 #ansible-playbook playbooks/studentapp-deploy.yaml -i inventory -u student --extra-vars "ansible_sudo_pass=student"
-ansible-playbook playbooks/studentapp-deploy.yaml -i inventory --user=student --extra-vars "ansible_sudo_pass=student" -e "STUDENTWAR=http://admin:admin123@10.128.0.7:8081/repository/studenapp-snapshot/com/jdevs/studentapp/2.7-SNAPSHOT/studentapp-2.7-20191101.041539-6.war"
+ansible-playbook playbooks/studentapp-deploy.yaml -i inventory --user=student --extra-vars "ansible_sudo_pass=student" -e "STUDENTWAR=$http://admin:admin123@10.128.0.7:8081/repository/studenapp-snapshot/com/jdevs/studentapp/2.7-SNAPSHOT/studentapp-2.7-20191101.041539-6.war"
