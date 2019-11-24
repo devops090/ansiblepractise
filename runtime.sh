@@ -9,3 +9,4 @@ echo $FINALVER
 echo $http_url
 echo $STUDENTWAR
 #ansible-playbook playbooks/studentapp-deploy.yaml -i inventory -u student --extra-vars "ansible_sudo_pass=student"
+ansible-playbook playbooks/studentapp-deploy.yaml -i inventory --user=student --extra-vars "ansible_sudo_pass=student" "STUDENTWAR={{STUDENTWAR}}"
