@@ -37,7 +37,7 @@
 
     - name : download the latest student war file
       get_url :
-        url : {{STUNDENTWAR}}
+        url : "{{STUNDENTWAR}}"
         dest : "{{TOMCAT_DIR}}/webapps/"
       become_user : "{{USERNAME}}"
 
