@@ -5,7 +5,7 @@
     - USERNAME : student
     - TOMCAT_PATH : /home/student
     - TOMCAT_DIR : "{{TOMCAT_PATH}}/tomcat9"
-    - STUDENTWAR : "{{STUDENTWAR}}"
+    - STUDENTWAR : $STUDENTWAR
   tasks :
     - name : print the TOMCAT_DIR
       debug :
