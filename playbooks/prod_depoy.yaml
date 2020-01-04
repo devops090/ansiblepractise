@@ -1,0 +1,43 @@
+- name : deploying the student project
+  hosts : PROD
+  #become : yes
+  vars :
+    - USERNAME : student
+    - TOMCAT_PATH : /home/student
+    - TOMCAT_DIR : "{{TOMCAT_PATH}}/tomcat9"
+    #- STUDENTWAR : {{ URL }}
+  tasks :
+    - name : print the TOMCAT_DIR
+      debug :
+        msg : "{{TOMCAT_DIR}}/webapps"
+
+    - name : run the ls -l command
+      shell : ls -l
+      args :
+        chdir : "{{TOMCAT_DIR}}/webapps"
+      become_user : "{{USERNAME}}"
+
+    - name : find the files and folders from webapps
+      find :
+        paths : "{{TOMCAT_DIR}}/webapps/*.war"
+        file_type : any
+      register : out
+      become_user : "{{USERNAME}}"
+
+    - name : print the files
+      debug : 
+        msg : "{{out}}"
+
+    - name : remove old artifacts
+      file :
+        path : "{{item.path}}"
+        state : absent
+      with_items : "{{out.files}}"
+      become_user : "{{USERNAME}}"
+
+    - name : download the latest student war file
+      get_url :
+        url : "{{STUDENTWAR}}"
+        dest : "{{TOMCAT_DIR}}/webapps/"
+      become_user : "{{USERNAME}}"
+      
