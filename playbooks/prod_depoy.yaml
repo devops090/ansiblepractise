@@ -2,7 +2,7 @@
   hosts : PROD
   #become : yes
   vars :
-    - USERNAME : student
+    - USERNAME : prod
     - TOMCAT_PATH : /home/student
     - TOMCAT_DIR : "{{TOMCAT_PATH}}/tomcat9"
     #- STUDENTWAR : {{ URL }}
