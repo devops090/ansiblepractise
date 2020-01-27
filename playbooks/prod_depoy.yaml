@@ -3,7 +3,7 @@
   #become : yes
   vars :
     - USERNAME : prod
-    - TOMCAT_PATH : /home/student
+    - TOMCAT_PATH : /home/prod
     - TOMCAT_DIR : "{{TOMCAT_PATH}}/tomcat9"
     #- STUDENTWAR : {{ URL }}
   tasks :
